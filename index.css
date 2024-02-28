@@ -1,0 +1,215 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #0f0f0f;
+  font-family: "Roboto", sans-serif;
+}
+header {
+  width: 100%;
+  background-color: #0f0f0f;
+  position: fixed;
+  top: 0;
+  display: flex;
+  z-index: 12;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  height: 56px;
+}
+
+.content {
+  position: relative;
+  top: 50px;
+  width: 100%;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+}
+
+.left #menu {
+  padding: 0 7px;
+  cursor: pointer;
+}
+.search {
+  display: flex;
+}
+
+.search form {
+  display: flex;
+  border: 1px solid hsl(0, 0%, 18.82%);
+  height: 40px;
+}
+.search input {
+  width: 550px;
+  padding: 0 4px 0 16px;
+  background-color: transparent;
+}
+
+input:focus {
+  outline: none;
+  border: 1px solid #065fd4;
+}
+
+.mic {
+  display: flex;
+  align-items: center;
+  padding: 10px 5px;
+  border: none;
+  border-radius: 50%;
+  background-color: hsla(0, 0%, 100%, 0.08);
+}
+
+.mic:hover {
+  background-color: hsla(0, 0%, 100%, 0.145);
+}
+svg {
+  fill: currentColor;
+  color: #fff;
+}
+.material-icons {
+  color: #fff;
+  padding: 0 7px;
+  cursor: pointer;
+}
+
+.main-content {
+  position: fixed;
+  left: 0;
+  display: flex;
+  width: 72px;
+  z-index: 1;
+  padding: auto 5px;
+  /* flex-wrap: wrap; */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  overflow: hidden;
+}
+.main-content button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main-content {
+  font-size: 11px;
+  color: #fff;
+  margin-top: 15px;
+  font-weight: 200;
+}
+.main-content .main-svg svg {
+  height: 23px;
+  width: 23px;
+  fill: #f1f1f1;
+}
+
+.main-content-btm {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 70px;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  cursor: pointer;
+}
+.main-content-btm:hover {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  border-radius: 10px;
+}
+.main-content-btm .btn:hover {
+  background-color: transparent;
+}
+
+.video-thumb {
+  border-radius: 8px;
+}
+
+.video-thumb:hover {
+  border-radius: 0;
+  transition: 0.2s;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+}
+
+.video-title {
+  line-height: 1.5rem;
+  font-weight: 500;
+  overflow: hidden;
+  display: block;
+  max-height: 3rem;
+  cursor: pointer;
+  -webkit-line-clamp: 2;
+}
+
+.channel-name {
+  color: #aaa;
+}
+
+.channel-logo {
+  max-width: 100px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+}
+
+.separator {
+  font-size: 0.8rem;
+  opacity: 0.6;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 650px) {
+  .side-bar {
+    width: 20%;
+  }
+  header .search,
+  header .right .videocam,
+  .account-circle,
+  .you-btn {
+    display: none;
+  }
+  .connectivity,
+  .plus-btn {
+    visibility: visible;
+  }
+  .main-content {
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: #0f0f0f;
+    width: 100%;
+    z-index: 1;
+    height: fit-content;
+    cursor: pointer;
+    padding-bottom: 12px;
+    font-size: 12px;
+  }
+  .video-title {
+    font-size: 13px;
+  }
+  .channel-name {
+    font-size: 12px;
+  }
+}
+
+@media screen and (min-width: 651px) {
+  .main-content {
+    top: 45px;
+  }
+  .connectivity,
+  .search-magnifying-glass,
+  .plus-btn,
+  .my-avatar {
+    display: none;
+  }
+  .youtube-logo {
+    padding-left: 26px;
+    height: 24px;
+  }
+}
