@@ -56,7 +56,7 @@ input:focus {
 .mic {
   display: flex;
   align-items: center;
-  padding: 10px 5px;
+  padding: 8px 2px;
   border: none;
   border-radius: 50%;
   background-color: hsla(0, 0%, 100%, 0.08);
